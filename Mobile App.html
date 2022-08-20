@@ -14,6 +14,8 @@
 </head>
 
 <body>
+
+    <!-- -------------------------HEADER-1------------------------- -->
     <div class="container-fluid Header-1">
         <div class="container">
             <div class="row py-1 d-flex justify-content-between">
@@ -140,6 +142,8 @@
         </div>
     </div>
 
+
+    <!-- -------------------------HEADER-2------------------------- -->
     <div class="container-fluid Header-2">
         <div class="container">
             <div class="row d-flex justify-content-between align-items-center">
@@ -878,16 +882,21 @@
                     </div>
                 </div>
                 <div class="col-2 p-0 header-2-right d-flex justify-content-between align-items-center">
-                    <div class="search d-flex py-2 px-3">
-                        <span>SEARCH</span><i class="fa fa-search"></i>
-                    </div>
+                    <button class="search d-flex align-items-center justify-content-center">
+                        <p class="search-text m-0">SEARCH</p>
+                        <i class="fa fa-search"></i>
+                        <i class="fa fa-times" style="display: none;"></i>
+                    </button>
                     <img src="Zenith-images/zenith logo.png">
+                    <div class="darkBackground justify-content-center align-items-center">
+                        <input type="text" placeholder="Type and press Enter">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- HEADER-2 ON MEDIUM SCREEN -->
+    <!------------------------- --HEADER-2 ON MEDIUM SCREEN------------------------- -->
     <div class="container-fluid Header-2-MD py-3">
         <div class="row m-0 d-flex justify-content-between align-items-center">
             <div class="col-4 p-0 Header-2-left-MD d-flex justify-content-between align-items-center">
@@ -901,7 +910,7 @@
                 </span>
                 <span>
                     <a href="#" class="px-1 d-flex flex-column justify-content-between align-items-center">
-                        <!-- <i class="m-0 icon fas fa-search"></i> -->
+                        <i class="m-0 icon fas fa-search"></i>
                         <h6 class="m-0 py-1">SEARCH</h6>
                     </a>
                 </span>
@@ -939,9 +948,10 @@
         </div>
     </div>
 
+    <!------------------------- --BANNER------------------------- -->
     <div class="container-fluid Banner d-flex align-items-center">
-        <div class="container">
-            <div class="row d-flex justify-content-between align-items-center">
+        <div class="container px-3">
+            <div class="row d-flex m-0 justify-content-between align-items-center">
                 <div class="col-lg-6 col-md-10 p-0">
                     <div class="banner-content">
                         <h1>
@@ -987,21 +997,40 @@
                     </a>
                 </ul>
             </div>
+        </div>
 
-            <div class="popup" id="popup">
-                <strong class="p-2 d-flex justify-content-center align-items-center" id="close-popup">
+        <div class="popup" id="popup">
+            <div class="popup-top p-3">
+                <span class="span-1 d-flex align-items-center justify-content-center" id="close-popup">
                     <i class="fa fa-times"></i>
-                </strong>
-                <div class="popup-top">
-                    <h6>Chat with us</h6>
-                    <p>Hello, is there anything i can help you with today?</p>
-                    <div class="image"></div>
+                </span>
+                <h6>Chat with us</h6>
+                <p>Hello, is there anything i can help you with today?</p>
+                <div class="image"></div>
+            </div>
+
+            <div class="popup-buttom my-2 justify-content-around">
+                <textarea placeholder="How can we help?" id="textarea"></textarea>
+                <i class="fa fa-paper-plane"></i>
+            </div>
+
+            <div class="chat-box flex-column align-items-center">
+                <div class="top py-1 px-2 d-flex justify-content-between align-items-center">
+                    <p class="m-0">Chat with us</p>
+                    <span class="span-2 d-flex justify-content-center align-items-center">
+                        <i class="fa fa-times"></i>
+                    </span>
                 </div>
-                <div class="popup-buttom py-3 d-flex justify-content-around align-items-center">
-                    <textarea placeholder="How can we help?" rows="1" cols="28" id="textarea" 
-                    onkeypress="autoGrow(this);" onkeyup="autoGrow(this)"></textarea>
-                    <i class="fa fa-paper-plane"></i>
-                </div>
+
+                <input type="text" placeholder="Full name">
+                <input type="email" placeholder="Email address">
+                <textarea placeholder="How can we help you" id="textarea"></textarea>
+
+                <button class="my-4 px-4">Start Conversation</button>
+            </div>
+
+            <div class="chat d-flex justify-content-center align-items-center">
+                <img src="Zenith-images/chat.png">
             </div>
         </div>
     </div>
@@ -1276,7 +1305,7 @@
                     </div>
                 </div>
 
-                <div class="col Social-Media">
+                <div class="col Social-Media my-4">
                     <ul class="m-0 p-1 d-flex justify-content-start align-items-center">
                         <a href="https://www.twitter.com/zenithbankplc/" target="_blank">
                             <li class="m-1 d-flex justify-content-center align-items-center">
@@ -1312,17 +1341,24 @@
                     </ul>
                 </div>
 
-                <div class="col-12 Privacy py-5">
+                <div class="col-12 Privacy my-3">
                     <div class="container p-0">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="col-lg-5 col-md-6 col-sm-12">
                                 <p>
                                     © 2021 Zenith Bank PLC | <a href="#/">Privacy Policy</a> | <a href="#/">Cookie
                                         Policy</a> |
                                     <a href="#/">Terms of Use</a>| <a href="#/">Sitemap</a>
                                 </p>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-end">
+
+                            <a href="#"
+                                class="col-lg-3 scrollup d-flex flex-column justify-content-between align-items-center">
+                                <i class="fas fa-chevron-up"></i>
+                                <p>SCROLL UP</p>
+                            </a>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-end">
                                 <p>
                                     <a href="#/">Gambia</a> | <a href="#/">Ghana</a> | <a href="#/">Sierra Leone</a> |
                                     <a href="#/">United Kingdom</a>
@@ -1335,8 +1371,8 @@
         </div>
     </div>
 
-    <div class="sticky-icons d-flex flex-column align-items-center">
-        <ul class="m-0 p-0" id="sticky-icons">
+    <div class="sticky-icons flex-column align-items-center">
+        <ul class="m-0 p-0 icons" style="visibility: visible;">
             <a href="https://api.whatsapp.com/send/?phone=2347040004422&text=Hi&app_absent=0" target="_blank">
                 <li class="my-2 sticky-1 d-flex justify-content-center align-items-center">
                     <i class="fab fa-whatsapp"></i>
@@ -1368,9 +1404,10 @@
                 </li>
             </a>
         </ul>
-        <p class="sticky-7 d-flex justify-content-center align-items-center" id="close-icon">
-            <i class="fa fa-times"></i>
-        </p>
+        <span class="p-3 sticky-7 d-flex justify-content-center align-items-center">
+            <i class="fa fa-times" id="fa-times"></i>
+            <i class="fa fa-share-alt" id="fa-share-alt" style="display: none;"></i>
+        </span>
     </div>
 
 
